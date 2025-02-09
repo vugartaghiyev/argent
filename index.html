@@ -4,30 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .hero {
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .problems h2 {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .hero:hover {
+        background-color: #f9f9f9;
+      }
+
+      .hero .how-text {
+        display: inline-block;
+        margin: 30px 0;
+      }
+
+      .hero .thing {
+        color: red;
+      }
+
+      .problems {
+        display: none;
+      }
+
+      .stubs {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .stubs p {
+        padding: 5px 0;
+        cursor: pointer;
+      }
+
+      .stubs p:hover {
+        background-color: #f9f9f9;
+      }
+
+      .stub,
+      .link {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid black;
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h2>Home page</h2>
       <ul>
-        <li>
-          <a href="#">Free Tools</a>
-        </li>
-        <li>
-          <a href="#">Argent Products</a>
-        </li>
-        <li>
-          <a href="#">White Papers</a>
-        </li>
-        <li>
-          <a href="#">Instant Help Now</a>
-        </li>
+        <li onclick="linkClicked(event)">Free Tools</li>
+        <li onclick="linkClicked(event)">Argent Products</li>
+        <li onclick="linkClicked(event)">White Papers</li>
+        <li onclick="linkClicked(event)">Instant Help Now</li>
       </ul>
-      <div class="hero">
+      <div class="hero" onclick="openHow()">
         <h1>Argent Makes Your Life Easier</h1>
-        <a class="" href="how.html">How?</a>
-        <p>The Only Thing Argent Sell Is Trust</p>
+        <p class="how-text">How?</p>
+        <p class="thing">The Only Thing Argent Sell Is Trust</p>
       </div>
+
+      <div class="link"></div>
+
+      <div class="problems">
+        <h2>Your Biggest Headache</h2>
+        <div class="stubs">
+          <p onclick="openStub(event)">Compliance</p>
+          <p onclick="openStub(event)">Patch Management</p>
+          <p onclick="openStub(event)">
+            Bad Network Devices -- Printers, Routers, CCTVs
+          </p>
+          <p onclick="openStub(event)">Understaffed</p>
+          <p onclick="openStub(event)">Network Performance</p>
+          <p onclick="openStub(event)">End User Complaints</p>
+          <p onclick="openStub(event)">Not Enough Budget</p>
+          <p onclick="openStub(event)">Reactive Not Proactive</p>
+          <p onclick="openStub(event)">TooMuch Manual Donkey Work</p>
+        </div>
+      </div>
+
+      <div class="stub"></div>
     </div>
+
+    <script>
+      const openHow = () => {
+        document.querySelector(".problems").style.display = "block";
+      };
+
+      const openStub = (event) => {
+        const stub = document.querySelector(".stub");
+        stub.style.display = "block";
+        stub.innerText = event.target.innerText + " clicked";
+      };
+
+      const linkClicked = (event) => {
+        const link = document.querySelector(".link");
+        link.style.display = "block";
+        link.innerText = event.target.innerText + " clicked";
+      };
+    </script>
   </body>
 </html>
