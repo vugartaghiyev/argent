@@ -26,6 +26,10 @@ header {
   text-decoration: none;
 }
 
+.home-page-icon {
+  width: 34px;
+}
+
 .container {
   display: flex;
   flex-direction: column;

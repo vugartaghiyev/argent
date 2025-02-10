@@ -21,7 +21,10 @@
       property="og:image"
       content="https://www.argent.com/assets/images/main-logo.png"
     />
-    <meta property="og:url" content="https://www.argent.com/" />
+    <meta
+      property="og:url"
+      content="https://www.argent.com/reactive-not-proactive.html"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -32,6 +35,12 @@
         </h2>
         <nav>
           <ul>
+            <li>
+              <a href="/">
+                <img class="home-page-icon" src="/assets/home.svg" alt="Home" />
+                <span class="sr-only">Home</span>
+              </a>
+            </li>
             <li><a href="/free-tools.html">Free Tools</a></li>
             <li><a href="/argent-products.html">Argent Products</a></li>
             <li><a href="/white-papers.html">White Papers</a></li>
@@ -45,5 +54,15 @@
         Argent Software | Proprietary Information - All Rights Reserved
       </footer>
     </div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Argent",
+        "url": "https://www.argent.com/",
+        "logo": "https://www.argent.com/assets/images/main-logo.png",
+        "description": "AI-driven compliance solutions for GDPR, CJIS, and other regulatory frameworks."
+      }
+    </script>
   </body>
 </html>
