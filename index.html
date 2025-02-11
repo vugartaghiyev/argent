@@ -93,6 +93,39 @@
         </section>
       </main>
 
+      <div class="modal">
+        <div onclick="closeHow()" class="modal-overlay"></div>
+        <div class="modal-content">
+          <span class="modal-close" onclick="closeHow()">&times;</span>
+          <p class="modal-title">Your Biggest Headache</p>
+          <div class="stubs">
+            <a href="/CURSOR_7_GENERATED_COMPLIANCE.HTML">Compliance</a>
+            <a href="/CURSOR_7_GENERATED_PATCH-MANAGEMENT.HTML"
+              >Patch Management</a
+            >
+            <a href="/CURSOR_7_GENERATED_BAD-NETWORK-DEVICES.HTML"
+              >Bad Network Devices — Printers, Routers, CCTVs</a
+            >
+            <a href="/CURSOR_7_GENERATED_UNDERSTAFFED.HTML">Understaffed</a>
+            <a href="/CURSOR_7_GENERATED_NETWORK-PERFORMANCE.HTML"
+              >Network Performance</a
+            >
+            <a href="/CURSOR_7_GENERATED_END-USER-COMPLAINTS.HTML"
+              >End User Complaints</a
+            >
+            <a href="/CURSOR_7_GENERATED_NOT-ENOUGH-BUDGET.HTML"
+              >Not Enough Budget</a
+            >
+            <a href="/CURSOR_7_GENERATED_REACTIVE-NOT-PROACTIVE.HTML"
+              >Reactive Not Proactive</a
+            >
+            <a href="/CURSOR_7_GENERATED_MANUAL-DONKEY-WORK.HTML"
+              >Too Much Manual Donkey Work</a
+            >
+          </div>
+        </div>
+      </div>
+
       <footer>
         <!-- Enhanced footer with structured information -->
         <p>
@@ -132,5 +165,14 @@
     </script>
 
     <!-- ... existing JavaScript code ... -->
+    <script>
+      const openHow = () => {
+        document.querySelector(".modal").style.display = "block";
+      };
+
+      const closeHow = () => {
+        document.querySelector(".modal").style.display = "none";
+      };
+    </script>
   </body>
 </html>
